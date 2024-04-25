@@ -1,0 +1,13 @@
+version: "3.9"
+services:
+  server:
+    build: .
+    mem_limit: 500m
+    cpus: 0.5
+    ports:
+      - "8002:8002"
+    environment:
+      PORT: 8002
+    volumes:
+      - ./.glogs:/glogs
+    stop_grace_period: 30s
